@@ -6,22 +6,29 @@
 
 ## ERD
 
+![second](https://github.com/mackerel-10/second-backend/assets/67633810/2cf9fd41-ed21-48b5-b541-e18335fb964b)
+
 ## DDL
 
-1. TABLE customer
+```SQL
+CREATE TABLE customer (
+   id INT NOT NULL AUTO_INCREMENT,
+   name VARCHAR(32) NOT NULL,
+   grade CHAR NOT NULL,
+   created_at DATETIME NOT NULL DEFAULT NOW(),
+   updated_at DATETIME NOT NULL DEFAULT NOW() ON UPDATE NOW(),
+   PRIMARY KEY(id)
+);
 
-   ```sql
-   CREATE TABLE customer
-   ```
-
-2. TABLE order
-
-   ```sql
-   CREATE TABLE order
-   ```
+CREATE TABLE `order` (
+   id INT NOT NULL AUTO_INCREMENT,
+   customer_id INT NOT NULL,
+   type VARCHAR(8) NOT NULL,
+   created_at DATETIME NOT NULL,
+   updated_at DATETIME NOT NULL DEFAULT NOW() ON UPDATE NOW(),
+   PRIMARY KEY(id),
+   FOREIGN KEY(customer_id) REFERENCES customer(id)
+);
+```
 
 ## API
-
-1.
-2.
-3.
