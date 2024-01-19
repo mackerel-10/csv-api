@@ -1,6 +1,6 @@
 import express, { json } from 'express';
 import dotenv from 'dotenv/config';
-import { insertCSV } from './services';
+import { insertCSV, salesStatistics } from './services';
 import multer from 'multer';
 
 const app = express();
@@ -13,6 +13,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use('/csv-file', upload.single('file'), insertCSV);
 
 // 2) 월별 매출 통계 API
+app.use('/sales-statistics', salesStatistics);
 
 // 3) 주문 목록 조회 API
 
