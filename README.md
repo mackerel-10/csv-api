@@ -1,2 +1,25 @@
 # second-backend
-두번째 채용 과제입니다.
+
+> Node.js/Express, MySQL
+
+## ERD
+
+## DDL
+
+- TABLE customer
+
+```sql
+CREATE TABLE customer
+```
+
+- TABLE order
+
+```sql
+CREATE TABLE order
+```
+
+## API
+
+1.
+2.
+3.
