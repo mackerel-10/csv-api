@@ -12,22 +12,23 @@
 
 ```SQL
 CREATE TABLE customer (
-   id INT NOT NULL AUTO_INCREMENT,
-   name VARCHAR(32) NOT NULL,
-   grade CHAR NOT NULL,
-   created_at DATETIME NOT NULL DEFAULT NOW(),
-   updated_at DATETIME NOT NULL DEFAULT NOW() ON UPDATE NOW(),
-   PRIMARY KEY(id)
+	id INT NOT NULL,
+	name VARCHAR(32) NOT NULL,
+	grade CHAR NOT NULL,
+	created_at DATETIME NOT NULL DEFAULT NOW(),
+	updated_at DATETIME NOT NULL DEFAULT NOW() ON UPDATE NOW(),
+	PRIMARY KEY(id)
 );
 
 CREATE TABLE `order` (
-   id INT NOT NULL AUTO_INCREMENT,
-   customer_id INT NOT NULL,
-   type VARCHAR(8) NOT NULL,
-   created_at DATETIME NOT NULL,
-   updated_at DATETIME NOT NULL DEFAULT NOW() ON UPDATE NOW(),
-   PRIMARY KEY(id),
-   FOREIGN KEY(customer_id) REFERENCES customer(id)
+	id INT NOT NULL AUTO_INCREMENT,
+	customer_id INT NOT NULL,
+	type VARCHAR(8) NOT NULL,
+	amount INT NOT NULL,
+	created_at DATETIME NOT NULL,
+	updated_at DATETIME NOT NULL DEFAULT NOW() ON UPDATE NOW(),
+	PRIMARY KEY(id),
+	FOREIGN KEY(customer_id) REFERENCES customer(id)
 );
 ```
 
