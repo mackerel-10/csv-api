@@ -5,6 +5,7 @@ import { insertCSV, salesStatistics, getOrders } from './services';
 
 const app = express();
 const upload = multer({ dest: 'uploads/' });
+const port = process.env.PORT;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -25,6 +26,6 @@ app.use((err, req, res, next) => {
   });
 });
 
-app.listen(process.env.PORT, () => {
-  console.log('connected');
+app.listen(port, () => {
+  console.log(`Port ${port} connected`);
 });
