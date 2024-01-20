@@ -1,7 +1,7 @@
-import express from 'express';
-import dotenv from 'dotenv/config';
-import multer from 'multer';
-import { insertCSV, salesStatistics, getOrders } from './services';
+const express = require('express');
+const dotenv = require('dotenv/config');
+const multer = require('multer');
+const { insertCSV, salesStatistics, getOrders } = require('./services');
 
 const app = express();
 const upload = multer({ dest: 'uploads/' });

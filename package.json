@@ -4,7 +4,7 @@
   "description": "> Node.js/Express, MySQL",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --exec babel-node src/app"
+    "dev": "nodemon src/app"
   },
   "author": "",
   "license": "ISC",
@@ -16,9 +16,6 @@
     "mysql2": "^3.7.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.23.7",
-    "@babel/node": "^7.22.19",
-    "@babel/preset-env": "^7.23.8",
     "nodemon": "^3.0.3"
   }
 }

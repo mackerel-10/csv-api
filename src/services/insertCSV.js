@@ -1,6 +1,6 @@
-import { parse } from 'csv-parse/sync';
-import fs from 'fs';
-import db from '../db';
+const { parse } = require('csv-parse/sync');
+const fs = require('fs');
+const db = require('../db');
 
 const insertCSV = async (req, res, next) => {
   try {
@@ -44,4 +44,4 @@ const insertCSV = async (req, res, next) => {
   }
 };
 
-export default insertCSV;
+module.exports = insertCSV;

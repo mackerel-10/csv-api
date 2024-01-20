@@ -1,5 +1,5 @@
-import insertCSV from './insertCSV';
-import salesStatistics from './salesStatistics';
-import getOrders from './getOrders';
+const insertCSV = require('./insertCSV');
+const salesStatistics = require('./salesStatistics');
+const getOrders = require('./getOrders');
 
-export { insertCSV, salesStatistics, getOrders };
+module.exports = { insertCSV, salesStatistics, getOrders };

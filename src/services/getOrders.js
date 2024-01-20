@@ -1,4 +1,4 @@
-import db from '../db';
+const db = require('../db');
 
 const combineWhereOptions = (startDate, endDate, customerId, orderType) => {
   let whereOptions = '';
@@ -61,4 +61,4 @@ const getOrders = async (req, res, next) => {
   }
 };
 
-export default getOrders;
+module.exports = getOrders;

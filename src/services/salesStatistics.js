@@ -1,4 +1,4 @@
-import db from '../db';
+const db = require('../db');
 
 const salesStatistics = async (req, res, next) => {
   try {
@@ -46,4 +46,4 @@ const salesStatistics = async (req, res, next) => {
   }
 };
 
-export default salesStatistics;
+module.exports = salesStatistics;

@@ -1,4 +1,4 @@
-import mysql from 'mysql2/promise';
+const mysql = require('mysql2/promise');
 
 const db = mysql.createPool({
   host: process.env.MYSQL_HOST,
@@ -12,9 +12,4 @@ db.on('connection', () => {
   console.log('DB connected!');
 });
 
-// (async () => {
-//   const result = await db.query(`DESCRIBE \`order\``);
-//   console.log(result);
-// })();
-
-export default db;
+module.exports = db;
