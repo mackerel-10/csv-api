@@ -1,4 +1,5 @@
 const db = require('../db');
+const { CustomError } = require('../error-handler');
 
 const salesStatistics = async (req, res, next) => {
   try {
@@ -23,7 +24,7 @@ const salesStatistics = async (req, res, next) => {
     refundStatistics = refundStatistics[0];
 
     if (!orderStatistics || !refundStatistics) {
-      throw new Error('DB를 가져오는데 실패했습니다.');
+      throw new CustomError(404, 'DB Not Found.');
     }
 
     const result = {};
