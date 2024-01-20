@@ -1,7 +1,7 @@
 # second-backend
 
 ![Node.js](https://img.shields.io/badge/Node.js-20.5.0-339933?style=flat&logo=Node.js&logocolor=white)
-![Express](https://img.shields.io/badge/Express-000000?style=flat&logo=Express&logocolor=white)
+![Express](https://img.shields.io/badge/Express-4.18.2-000000?style=flat&logo=Express&logocolor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-8.3.0-4479A1?style=flat&logo=MySQL&logocolor=white)
 
 - [🔗 API Docs](https://documenter.getpostman.com/view/26954227/2s9YsT6U9m)
@@ -44,4 +44,10 @@ MYSQL_PORT=
 MYSQL_USER=
 MYSQL_PASSWORD=
 MYSQL_DATABASE=
+```
+
+## Quick Start
+
+```bash
+npm start
 ```
