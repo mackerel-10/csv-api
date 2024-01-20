@@ -1,4 +1,5 @@
 const db = require('../db');
+const { CustomError } = require('../error-handler');
 
 const combineWhereOptions = (startDate, endDate, customerId, orderType) => {
   let whereOptions = '';
@@ -30,9 +31,13 @@ const getOrders = async (req, res, next) => {
     // Query: startDate, endDate, orderType, customerId, pageSize, pageNo
     let { startDate, endDate, orderType, customerId, pageSize, pageNo } =
       req.query;
+
     if (!pageSize && !pageNo) {
       pageNo = 1;
       pageSize = 50;
+    }
+    if ((startDate && !endDate) || (!startDate && endDate)) {
+      throw new CustomError(400, 'Need Both startDate and endDate');
     }
 
     const whereOptions = combineWhereOptions(

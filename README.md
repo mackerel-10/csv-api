@@ -4,6 +4,8 @@
 ![Express](https://img.shields.io/badge/Express-000000?style=flat&logo=Express&logocolor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-8.3.0-4479A1?style=flat&logo=MySQL&logocolor=white)
 
+- [🔗 API Docs](https://documenter.getpostman.com/view/26954227/2s9YsT6U9m)
+
 ## ERD
 
 ![second](https://github.com/mackerel-10/second-backend/assets/67633810/2cf9fd41-ed21-48b5-b541-e18335fb964b)

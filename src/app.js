@@ -2,6 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv/config');
 const multer = require('multer');
 const { insertCSV, salesStatistics, getOrders } = require('./services');
+const { errorHandler } = require('./error-handler');
 
 const app = express();
 const upload = multer({ dest: 'uploads/' });
@@ -19,12 +20,7 @@ app.get('/sales-statistics', salesStatistics);
 // 3) 주문 목록 조회 API
 app.get('/orders', getOrders);
 
-app.use((err, req, res, next) => {
-  return res.status(400).json({
-    message: 'Failed',
-    err,
-  });
-});
+app.use(errorHandler);
 
 app.listen(port, () => {
   console.log(`Port ${port} connected`);
