@@ -4,7 +4,8 @@
   "description": "> Node.js/Express, MySQL",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/app"
+    "dev": "nodemon src/app",
+    "start": "node src/app"
   },
   "author": "",
   "license": "ISC",
