@@ -32,4 +32,14 @@ CREATE TABLE `order` (
 );
 ```
 
-## API
+## 환경변수
+
+```
+PORT=
+
+MYSQL_HOST=
+MYSQL_PORT=
+MYSQL_USER=
+MYSQL_PASSWORD=
+MYSQL_DATABASE=
+```
